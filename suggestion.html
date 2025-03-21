@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Energy Audit</title>
+  <link rel="icon" type="favicon" href="icon.png">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Main Heading with Light Blue Background */
+    h1.main-title {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+      background-color: #d0e7ff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* Section Titles - Centered without light blue */
+    h1.section-title {
+      text-align: center;
+      color: #333;
+      font-size: 1.6em;
+      margin: 40px 0 20px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    /* Details Dropdown Styles */
+    details {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      transition: background-color 0.3s;
+    }
+
+    details[open] {
+      background-color: #e9f5e9;
+    }
+
+    /* Summary for specified sections gets light blue background */
+    details summary {
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      background-color: #d0e7ff;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .suggestions {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+    }
+
+    .suggestions ul {
+      list-style: disc;
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+
+    header {
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #1a3858;
+      /* Blue header background */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid green;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      background: #28a745;
+      /* Green buttons */
+      color: white;
+      font-size: medium;
+      border: none;
+      padding: 18px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+      margin-right: 10px;
+
+    }
+
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Home Energy Efficiency Checklist</h1>
+    <nav>
+      <button onclick="location.href='about.html'">About</button>
+      <button onclick="location.href='contact.html'">Contact</button>
+      <button onclick="location.href='suggestion.html'">Suggestions</button>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 class="main-title">Suggestions</h1>
+
+    <!-- Lighting Section -->
+    <h1 class="section-title">Lighting 💡</h1>
+    <details>
+      <summary>Are energy-efficient lighting systems installed?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Upgrade from incandescent or fluorescent bulbs to LED bulbs.</li>
+          <li>Look for Energy Star certified lighting solutions.</li>
+          <li>Evaluate overall energy savings and lifespan improvements.</li>
+          <li>Consider smart lighting systems that adjust automatically.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are lighting controls (e.g., sensors, timers) in place?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Install occupancy sensors to ensure lights are used only when needed.</li>
+          <li>Use timers and dimmers to reduce energy consumption during low-usage periods.</li>
+          <li>Integrate automated systems with home automation platforms.</li>
+          <li>Review and adjust settings periodically for optimal performance.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is there a regular maintenance schedule for lighting systems?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Establish a maintenance plan that includes cleaning and bulb replacement.</li>
+          <li>Schedule periodic inspections to detect and repair faulty wiring.</li>
+          <li>Keep logs of maintenance activities to track improvements over time.</li>
+          <li>Engage professional services for regular system audits.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is there a backup lighting plan in case of power outages?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Install emergency lighting systems, such as battery-backed LEDs.</li>
+          <li>Consider solar-powered backup systems where feasible.</li>
+          <li>Develop a contingency plan for critical areas.</li>
+          <li>Test backup systems periodically to ensure reliability.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are exterior lights optimized for energy savings?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Use motion sensors for outdoor lighting to minimize unnecessary usage.</li>
+          <li>Replace old outdoor fixtures with LED-based solutions.</li>
+          <li>Position lights to avoid light pollution and energy waste.</li>
+          <li>Maintain and clean outdoor fixtures regularly.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is lighting usage monitored for energy efficiency?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Install energy monitoring devices to track lighting consumption.</li>
+          <li>Analyze usage data to identify patterns and areas for improvement.</li>
+          <li>Set energy reduction goals and benchmarks.</li>
+          <li>Review usage periodically and adjust systems accordingly.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are LED alternatives considered for replacements?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Compare energy consumption and cost-effectiveness of LED vs. traditional bulbs.</li>
+          <li>Plan phased replacements to upgrade existing fixtures.</li>
+          <li>Consult lighting experts for the best LED options.</li>
+          <li>Explore available rebates or incentives for LED upgrades.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- HVAC Section -->
+    <h1 class="section-title">Heating, Ventilation, and Air Conditioning (HVAC) 🌡</h1>
+    <details>
+      <summary>Are HVAC systems regularly inspected and maintained?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Schedule routine inspections and maintenance visits.</li>
+          <li>Keep detailed logs of inspections for accountability.</li>
+          <li>Replace worn-out parts promptly.</li>
+          <li>Use certified professionals for maintenance.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are programmable thermostats installed and used effectively?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Install programmable thermostats to optimize temperature settings.</li>
+          <li>Schedule temperature adjustments based on occupancy.</li>
+          <li>Educate residents on proper usage.</li>
+          <li>Integrate thermostats with home automation systems.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is the building properly insulated to reduce HVAC loads?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Upgrade insulation in walls, attics, and floors.</li>
+          <li>Perform thermal imaging inspections to detect leaks.</li>
+          <li>Seal gaps or cracks in the building envelope.</li>
+          <li>Consider additional insulation in critical areas.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are there energy management systems to control HVAC usage?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Implement smart energy management systems for better control.</li>
+          <li>Integrate HVAC systems with renewable energy sources.</li>
+          <li>Monitor system performance in real time.</li>
+          <li>Analyze data to optimize energy usage.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is the air filtration system working optimally?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Regularly replace filters and clean ducts.</li>
+          <li>Use high-efficiency particulate air (HEPA) filters if possible.</li>
+          <li>Schedule deep cleaning of ductwork annually.</li>
+          <li>Ensure proper sizing of the filtration system.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are seasonal adjustments made to HVAC operations?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Adjust HVAC settings based on seasonal weather patterns.</li>
+          <li>Conduct seasonal energy audits.</li>
+          <li>Utilize vacation mode when appropriate.</li>
+          <li>Review energy bills for seasonal trends.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is energy consumption data for HVAC systems tracked?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Use energy monitoring tools to track performance.</li>
+          <li>Establish benchmarks for energy consumption.</li>
+          <li>Analyze data to identify improvement opportunities.</li>
+          <li>Report findings to stakeholders.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Appliances and Equipment Section -->
+    <h1 class="section-title">Appliances and Equipment 💻</h1>
+    <details>
+      <summary>Are energy-efficient appliances and equipment in use?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Replace older appliances with Energy Star rated models.</li>
+          <li>Research the latest energy-efficient technologies.</li>
+          <li>Implement an upgrade schedule for outdated equipment.</li>
+          <li>Monitor energy usage of key appliances.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is there a policy for turning off equipment when not in use?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Implement a power management policy to reduce standby energy.</li>
+          <li>Install timers or smart plugs for automatic shutoff.</li>
+          <li>Educate staff on best practices for energy conservation.</li>
+          <li>Review equipment usage patterns periodically.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are there regular energy audits for major equipment?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Conduct periodic audits to identify energy-saving opportunities.</li>
+          <li>Utilize third-party audits for unbiased evaluations.</li>
+          <li>Compare current performance against industry benchmarks.</li>
+          <li>Implement recommendations promptly.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are outdated appliances scheduled for replacement?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Create a replacement schedule for inefficient appliances.</li>
+          <li>Budget for periodic equipment upgrades.</li>
+          <li>Prioritize high-consumption devices for replacement.</li>
+          <li>Evaluate ROI for new technologies.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is equipment energy performance regularly monitored?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Utilize monitoring systems to track performance.</li>
+          <li>Set performance benchmarks and review trends.</li>
+          <li>Analyze data to pinpoint inefficiencies.</li>
+          <li>Report and address deviations promptly.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are power-saving modes activated on electronic devices?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Ensure devices use energy-saving modes during idle times.</li>
+          <li>Update device settings to default to low power consumption.</li>
+          <li>Perform regular reviews of device configurations.</li>
+          <li>Consider automation for power management.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is staff trained on energy-efficient equipment usage?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Provide regular training sessions on energy conservation.</li>
+          <li>Share tips and best practices through internal communications.</li>
+          <li>Encourage staff to suggest further improvements.</li>
+          <li>Include energy efficiency in performance metrics.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Building Envelope Section -->
+    <h1 class="section-title">Building Envelope 🏠</h1>
+    <details>
+      <summary>Are windows and doors properly sealed?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Apply weather-stripping and caulking around windows and doors.</li>
+          <li>Inspect seals annually and replace if necessary.</li>
+          <li>Use high-quality sealants for long-lasting protection.</li>
+          <li>Consider installing draft excluders.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is the insulation adequate for the building type and climate?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Upgrade insulation materials to meet current standards.</li>
+          <li>Conduct energy assessments to identify weak spots.</li>
+          <li>Consider additional insulation in extreme climates.</li>
+          <li>Review insulation performance metrics regularly.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are there any noticeable drafts or areas of heat loss?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Perform thermal imaging to detect drafts.</li>
+          <li>Seal any gaps identified during inspections.</li>
+          <li>Replace worn-out weather-stripping.</li>
+          <li>Consult a professional for a comprehensive audit.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are windows double-glazed to reduce energy loss?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Upgrade single-pane windows to double or triple glazing.</li>
+          <li>Consider low-emissivity coatings for added efficiency.</li>
+          <li>Compare energy savings with installation costs.</li>
+          <li>Research government incentives for window upgrades.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is there a plan for upgrading the building envelope if needed?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Develop a long-term upgrade plan for the building envelope.</li>
+          <li>Prioritize upgrades based on energy savings potential.</li>
+          <li>Budget for phased improvements over several years.</li>
+          <li>Review plans annually to incorporate new technologies.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are roof and wall insulation inspected regularly?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Schedule annual inspections for roof and wall insulation.</li>
+          <li>Use infrared cameras to detect insulation gaps.</li>
+          <li>Replace insulation in areas where performance drops.</li>
+          <li>Consult professionals for optimal solutions.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is moisture control effectively managed to protect insulation?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Implement moisture barriers where needed.</li>
+          <li>Ensure proper ventilation in areas prone to humidity.</li>
+          <li>Monitor indoor humidity levels regularly.</li>
+          <li>Repair water leaks promptly to prevent damage.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Renewable Energy Section -->
+    <h1 class="section-title">Renewable Energy 🌿</h1>
+    <details>
+      <summary>Has the potential for on-site renewable energy generation been assessed?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Conduct a feasibility study for solar, wind, or geothermal systems.</li>
+          <li>Engage a professional consultant for detailed analysis.</li>
+          <li>Evaluate current energy consumption against renewable potential.</li>
+          <li>Research local renewable energy programs and incentives.</li>
+          <li>Consider integrating renewable energy with smart grid technology.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are there any renewable energy systems currently in place?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Review the efficiency of existing renewable installations.</li>
+          <li>Ensure regular maintenance of renewable systems.</li>
+          <li>Monitor output against expected performance.</li>
+          <li>Consider upgrading components to modern standards.</li>
+          <li>Check for integration with home energy management systems.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is there a plan for future renewable energy projects?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Develop a roadmap for integrating additional renewable energy sources.</li>
+          <li>Set clear goals and timelines for project implementation.</li>
+          <li>Research funding and incentive options to support projects.</li>
+          <li>Involve stakeholders in planning for maximum impact.</li>
+          <li>Consider scalability and future technological advancements.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is the renewable energy system regularly monitored?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Install monitoring systems to track performance in real time.</li>
+          <li>Review data regularly to identify inefficiencies.</li>
+          <li>Schedule periodic evaluations of system output.</li>
+          <li>Adjust maintenance practices based on performance reports.</li>
+          <li>Benchmark against similar installations for optimization.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are there incentives in place to support renewable energy adoption?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Research local, state, and federal incentives available.</li>
+          <li>Utilize rebates and tax credits to offset installation costs.</li>
+          <li>Partner with energy consultants to maximize benefits.</li>
+          <li>Stay updated on policy changes affecting renewable energy.</li>
+          <li>Evaluate long-term savings and environmental impact.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Is energy storage (e.g., batteries) considered as part of the plan?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Evaluate the benefits of integrating battery storage.</li>
+          <li>Consider cost, lifespan, and efficiency of storage options.</li>
+          <li>Plan for scalability to match future energy needs.</li>
+          <li>Research emerging technologies in energy storage.</li>
+          <li>Assess compatibility with existing renewable systems.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Are renewable energy performance metrics tracked over time?</summary>
+      <div class="suggestions">
+        <ul>
+          <li>Use data analytics to measure and improve performance.</li>
+          <li>Set benchmarks and review performance quarterly.</li>
+          <li>Adjust strategies based on historical performance data.</li>
+          <li>Engage with experts to optimize system output.</li>
+          <li>Compare against industry standards for continuous improvement.</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+</body>
+
+</html>

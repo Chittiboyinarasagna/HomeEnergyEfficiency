@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Audit Suggestions</title>
+    <link rel="icon" type="favicon" href="icon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        .suggestions-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .suggestion {
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #007BFF;
+            background: #f1f8ff;
+            border-radius: 5px;
+        }
+
+        .no-suggestions {
+            text-align: center;
+            font-size: 18px;
+            color: #28a745;
+        }
+
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #1a3858;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #145a82;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Energy Audit Suggestions</h1>
+
+    <!-- Back Button -->
+    <button onclick="goBack()" class="back-button">⬅️ Back to Checklist</button>
+
+    <div class="suggestions-container" id="suggestions-container">
+        <p class="no-suggestions" id="no-suggestions" style="display: none;">✅ Great job! No major improvements needed.
+        </p>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "checklist.html"; // Redirect to index.html
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch "no" responses from localStorage
+            const noResponses = JSON.parse(localStorage.getItem("noResponses")) || [];
+
+            // Predefined suggestions for each question
+            const suggestions = {
+                "Are energy-efficient lighting systems installed?": "Consider switching to LED bulbs and energy-efficient lighting systems.",
+                "Are lighting controls (e.g., sensors, timers) in place?": "Install motion sensors or timers to reduce unnecessary energy consumption.",
+                "Is there a regular maintenance schedule for lighting systems?": "Schedule routine checks to ensure lights operate efficiently and replace faulty ones.",
+                "Is there a backup lighting plan in case of power outages?": "Ensure emergency lighting or backup power sources are available.",
+                "Are exterior lights optimized for energy savings?": "Use solar-powered or sensor-based lighting for outdoor areas.",
+                "Is lighting usage monitored for energy efficiency?": "Implement energy monitoring tools to track lighting consumption.",
+                "Are LED alternatives considered for replacements?": "Upgrade older bulbs to energy-efficient LED options to save costs.",
+
+                "Are HVAC systems regularly inspected and maintained?": "Regular maintenance helps improve efficiency and extends HVAC lifespan.",
+                "Are programmable thermostats installed and used effectively?": "Use programmable thermostats to optimize heating/cooling schedules.",
+                "Is the building properly insulated to reduce HVAC loads?": "Improve insulation to reduce energy costs related to heating and cooling.",
+                "Are there energy management systems to control HVAC usage?": "Implement automated energy management systems for better HVAC control.",
+                "Is the air filtration system working optimally?": "Regularly clean and replace air filters to maintain efficiency.",
+                "Are seasonal adjustments made to HVAC operations?": "Adjust HVAC settings based on the season for optimal energy use.",
+                "Is energy consumption data for HVAC systems tracked?": "Monitor and analyze HVAC energy consumption for improvements.",
+
+                "Are energy-efficient appliances and equipment in use?": "Replace outdated appliances with energy-efficient models.",
+                "Is there a policy for turning off equipment when not in use?": "Encourage turning off unused devices to reduce energy waste.",
+                "Are there regular energy audits for major equipment?": "Conduct regular audits to identify and optimize energy usage.",
+                "Are outdated appliances scheduled for replacement?": "Plan upgrades for old appliances with energy-efficient alternatives.",
+                "Is equipment energy performance regularly monitored?": "Use smart meters or sensors to track equipment energy consumption.",
+                "Are power-saving modes activated on electronic devices?": "Enable power-saving modes to reduce standby power consumption.",
+                "Is staff trained on energy-efficient equipment usage?": "Train employees on best practices for using equipment efficiently.",
+
+                "Are windows and doors properly sealed?": "Check and seal gaps around windows and doors to prevent energy loss.",
+                "Is the insulation adequate for the building type and climate?": "Upgrade insulation materials to improve energy retention.",
+                "Are there any noticeable drafts or areas of heat loss?": "Use thermal imaging or draft detectors to find and fix leaks.",
+                "Are windows double-glazed to reduce energy loss?": "Consider upgrading to double-glazed windows for better insulation.",
+                "Is there a plan for upgrading the building envelope if needed?": "Assess and improve walls, roofs, and foundations for better insulation.",
+                "Are roof and wall insulation inspected regularly?": "Schedule regular insulation checks to maintain efficiency.",
+                "Is moisture control effectively managed to protect insulation?": "Ensure proper ventilation to prevent moisture damage to insulation.",
+
+                "Has the potential for on-site renewable energy generation been assessed?": "Conduct feasibility studies for solar, wind, or geothermal energy.",
+                "Are there any renewable energy systems currently in place?": "Consider installing renewable energy solutions to cut costs.",
+                "Is there a plan for future renewable energy projects?": "Develop a roadmap for future investment in renewables.",
+                "Is the renewable energy system regularly monitored?": "Monitor performance to ensure the system is operating efficiently.",
+                "Are there incentives in place to support renewable energy adoption?": "Check for government or private incentives to offset costs.",
+                "Is energy storage (e.g., batteries) considered as part of the plan?": "Integrate battery storage to maximize renewable energy use.",
+                "Are renewable energy performance metrics tracked over time?": "Track and analyze data to optimize renewable energy usage."
+            };
+
+            const container = document.getElementById("suggestions-container");
+            const noSuggestionsMessage = document.getElementById("no-suggestions");
+
+            if (noResponses.length === 0) {
+                noSuggestionsMessage.style.display = "block"; // Show no suggestions message
+            } else {
+                noResponses.forEach(question => {
+                    const suggestionDiv = document.createElement("div");
+                    suggestionDiv.classList.add("suggestion");
+                    suggestionDiv.textContent = suggestions[question] || "No suggestion available.";
+                    container.appendChild(suggestionDiv);
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
